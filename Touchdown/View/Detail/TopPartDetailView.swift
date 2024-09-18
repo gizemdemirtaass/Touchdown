@@ -11,6 +11,7 @@ struct TopPartDetailView: View {
     // MARK: - PROPERTIES
     
     @State private var isAnimating: Bool = false
+    @EnvironmentObject var shop: Shop
     
     // MARK: - BODY
     var body: some View {
@@ -19,7 +20,7 @@ struct TopPartDetailView: View {
             VStack (alignment: .leading , spacing: 6, content: {
                 Text("Price")
                     .fontWeight(.semibold)
-                Text(sampleProduct.formattedPrice)
+                Text(shop.selectedProduct?.formattedPrice ?? sampleProduct.formattedPrice)
                     .font(.largeTitle)
                     .fontWeight(.black)
                     .scaleEffect(1.35, anchor: .leading) //Çapa Liderliği - YAZI BOYUTUNU ARTIRDIK!
@@ -27,7 +28,7 @@ struct TopPartDetailView: View {
             .offset(y: isAnimating ? -50 : -75)
             Spacer()
            // PHOTO
-            Image(sampleProduct.image)
+            Image(shop.selectedProduct?.image ?? sampleProduct.image)
                 .resizable()
                 .scaledToFit()
                 .offset(y: isAnimating ? 0 : -35)
@@ -45,6 +46,7 @@ struct TopPartDetailView: View {
 
 #Preview {
     TopPartDetailView()
+        .environmentObject(Shop())
         .previewLayout(.sizeThatFits)
         .padding()
         .background(Color.gray)

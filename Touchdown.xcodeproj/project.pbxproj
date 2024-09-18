@@ -41,6 +41,7 @@
 		817C53982C99EEB900C25312 /* RatingsSizesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C53972C99EEB900C25312 /* RatingsSizesDetailView.swift */; };
 		817C539A2C99F94600C25312 /* QuantityFavouriteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C53992C99F94600C25312 /* QuantityFavouriteDetailView.swift */; };
 		817C539C2C99FF2C00C25312 /* AddToCardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C539B2C99FF2C00C25312 /* AddToCardDetailView.swift */; };
+		81AF755A2C9AF6EE0006AFA8 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AF75592C9AF6EE0006AFA8 /* Shop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		817C53972C99EEB900C25312 /* RatingsSizesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsSizesDetailView.swift; sourceTree = "<group>"; };
 		817C53992C99F94600C25312 /* QuantityFavouriteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityFavouriteDetailView.swift; sourceTree = "<group>"; };
 		817C539B2C99FF2C00C25312 /* AddToCardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCardDetailView.swift; sourceTree = "<group>"; };
+		81AF75592C9AF6EE0006AFA8 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			children = (
 				8166E3C02C8F9B960092445D /* Constant.swift */,
 				817C53952C99E7F800C25312 /* CustomShape.swift */,
+				81AF75592C9AF6EE0006AFA8 /* Shop.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				810FBA2F2C90C22500C5CBE6 /* SectionView.swift in Sources */,
 				817C53962C99E7F800C25312 /* CustomShape.swift in Sources */,
 				810FBA2B2C90B34400C5CBE6 /* CategoryItemView.swift in Sources */,
+				81AF755A2C9AF6EE0006AFA8 /* Shop.swift in Sources */,
 				814DDA152C91C7AF00F91FF7 /* BrandModel.swift in Sources */,
 				810FBA272C90902F00C5CBE6 /* FeaturedTabView.swift in Sources */,
 				817C539A2C99F94600C25312 /* QuantityFavouriteDetailView.swift in Sources */,

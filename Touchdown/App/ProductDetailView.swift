@@ -10,7 +10,7 @@ import SwiftUI
 struct ProductDetailView: View {
     // MARK: - PROPERTIES
     
-    
+    @EnvironmentObject var shop: Shop
     
     // MARK: - BODY
     var body: some View {
@@ -40,7 +40,8 @@ struct ProductDetailView: View {
                // DESCRIPTION
                 
                 ScrollView(.vertical, showsIndicators: false, content:  {
-                    Text(sampleProduct.description)
+                    Text(shop.selectedProduct?.description ??
+                        sampleProduct.description)
                         .font(.system(.body, design: .rounded))
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.leading)
@@ -63,7 +64,11 @@ struct ProductDetailView: View {
         .zIndex(0) // Z index değiştiricisini kullanarak bu görünümlerin uygun sırasını ayarlamamız gerekiyor.
         .ignoresSafeArea(.all, edges: .all)
         .background(
-            Color(red: sampleProduct.red, green: sampleProduct.green, blue: sampleProduct.blue)
+            Color(
+                //açma sonuçlarının sıfır olması durumunda her RGB renk değeri için varsayılan bir değeri için yine varsayılan bir değer sağlamak üzere çift soru işaretli nil birleştirme kullanıyoruz!
+                red: shop.selectedProduct?.red ?? sampleProduct.red,
+                green: shop.selectedProduct?.green ?? sampleProduct.green,
+                blue: shop.selectedProduct?.blue ?? sampleProduct.blue)
         ).ignoresSafeArea(.all, edges: .all)
     }
 }
@@ -71,5 +76,6 @@ struct ProductDetailView: View {
     // MARK: - PREVIEW
 #Preview {
     ProductDetailView()
+        .environmentObject(Shop())
         .previewLayout(.fixed(width: 375, height: 812))
 }

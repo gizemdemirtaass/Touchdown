@@ -12,6 +12,8 @@ struct TouchdownApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(Shop()) //Bu ortam nesnesi değiştiricisi, paylaşılan verilere dayanan görünümler oluşturmamızı sağlar.
+            //Artık Shop() sınıfının özelliklerine her yerden erişebiliriz!
         }
     }
 }
