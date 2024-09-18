@@ -35,10 +35,12 @@ struct QuantityFavouriteDetailView: View {
                 Image(systemName: "plus.circle")
             })
             Spacer()
-            Button(action: {}, label: {
-                Image(systemName: "heart.circle")
+            Button(action: {
                 feedback.impactOccurred()
-                    .foregroundColor(.pink)
+            }, label: {
+                Image(systemName: "heart.circle")
+                    
+                    foregroundColor(.pink)
             })
         }) //: HSTACK
         .font(.system(.title, design: .rounded))
