@@ -31,4 +31,4 @@ struct BrandItemView: View {
         .previewLayout(.sizeThatFits)
         .padding()
         .background(colorBackground)
-}
+} 

@@ -20,7 +20,8 @@ struct ProductDetailView: View {
             NavigationBarDetailView()
                 .padding(.horizontal)
                 .padding(.top,
-                         UIApplication.shared.windows.first?.safeAreaInsets.top) //IPHONE NUN YUKARISINDA YER ALAN SİYAH ALAN İÇİN BU KODU YAZDIK !! BAŞLIK HER ZAMAN SİYAH ALANINDA ALTINDA DÜZGÜN GÖRÜNECEK! (WITH NOTCH)(CUSTOM NAVBAR)
+                  UIApplication.shared.windows.first?.safeAreaInsets.top)
+            //IPHONE NUN YUKARISINDA YER ALAN SİYAH ALAN İÇİN BU KODU YAZDIK !! BAŞLIK HER ZAMAN SİYAH ALANINDA ALTINDA DÜZGÜN
             
             // HEADER
             HeaderDetailView()
@@ -74,8 +75,16 @@ struct ProductDetailView: View {
 }
 
     // MARK: - PREVIEW
-#Preview {
+//#Preview {
+//    ProductDetailView()
+//        .environmentObject(Shop())
+//        .previewLayout(.fixed(width: 375, height: 812))
+//}
+
+struct ProductDetailView_Previews: PreviewProvider {
+  static var previews: some View {
     ProductDetailView()
-        .environmentObject(Shop())
-        .previewLayout(.fixed(width: 375, height: 812))
+      .environmentObject(Shop())
+      .previewLayout(.fixed(width: 375, height: 812))
+  }
 }

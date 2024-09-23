@@ -20,7 +20,8 @@ struct ContentView: View {
                         .padding(.horizontal, 15)
                         .padding(.bottom)
                         .padding(.top,
-                                 UIApplication.shared.windows.first?.safeAreaInsets.top) //IPHONE NUN YUKARISINDA YER ALAN SİYAH ALAN İÇİN BU KODU YAZDIK !! BAŞLIK HER ZAMAN SİYAH ALANINDA ALTINDA DÜZGÜN GÖRÜNECEK! (WITH NOTCH)(CUSTOM NAVBAR)
+                          UIApplication.shared.windows.first?.safeAreaInsets.top)
+                    //IPHONE NUN YUKARISINDA YER ALAN SİYAH ALAN İÇİN BU KODU YAZDIK !! BAŞLIK HER ZAMAN SİYAH ALANINDA ALTINDA DÜZGÜN GÖRÜNECEK! (WITH NOTCH)(CUSTOM NAVBAR)
                         .background(Color.white)
                         .shadow(color: Color.black.opacity(0.05), radius: 5, x:0, y:5)
                     
